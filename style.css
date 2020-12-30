@@ -1,0 +1,79 @@
+
+
+
+body
+{
+    border:black solid 2px;
+    background-color: white;
+    text-align:center;
+    padding: 5px;
+}
+
+.container
+{
+  
+    /* width: 640px; */
+    /* border: slateblue dotted 1px; */
+    /* margin: 0; */
+    padding: 15px 30px;
+    position: relative;
+
+    /* 會繼承的設定 */
+    background-color: black;
+    color:white;
+   
+}
+
+.header
+{
+
+    background-color: white; 
+    margin: -15px -30px;
+    width: 100%;
+
+}
+
+
+/* .footer
+{
+display: flex;
+justify-content: space-between;
+}  */
+
+
+
+img
+{
+    border: 0;
+    max-width: 30%;
+    height: auto;
+}
+
+
+.head-nav,.middle,.middle-right
+{
+
+    /* 有設定就會變成展開框(理由未知)，沒有就是3個按鈕 */
+    /* width: 580px; */
+
+    border: slateblue dotted 1px;
+    margin: 50px auto;
+    padding: 15px 30px;
+
+}
+
+/* .ad,.nav
+{
+display: flex;
+justify-content: center;
+}
+
+*/
+
+
+
+
+
+
+
+
