@@ -15,8 +15,7 @@ body
     /* width: 640px; */
     /* border: slateblue dotted 1px; */
     /* margin: 0; */
-    padding: 15px 30px;
-    position: relative;
+    padding: 15px 10px;
 
     /* 會繼承的設定 */
     background-color: black;
@@ -26,20 +25,31 @@ body
 
 .header
 {
+    background-color: green;
 
-    background-color: white; 
-    margin: -15px -30px;
     width: 100%;
-
+/* 設定後整個區塊右側會缺一塊(跟margin衝突)，只能以auto屬性置中*/
+    position: fixed;
+/* 設定後整個區塊會往右偏移 */
+    top: 0;
+    left: 0;
+/* 設定完後會滿版，但整個區塊會往上偏移，需調整margin:top+bottom */
 }
 
 
-/* .footer
+.footer
 {
-display: flex;
-justify-content: space-between;
-}  */
+    background-color: green;
+    
+    width: 100%;
+/* 設定後整個區塊右側會缺一塊，只能以auto屬性置中*/
+    position: fixed;
+/* 設定後整個區塊會往右偏移 */
+    bottom: 0;
+    left: 0;
 
+    /* justify-content: space-between;  */
+} 
 
 
 img
