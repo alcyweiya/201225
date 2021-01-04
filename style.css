@@ -28,12 +28,29 @@ body
     background-color: green;
 
     width: 100%;
-/* 設定後整個區塊右側會缺一塊(跟margin衝突)，只能以auto屬性置中*/
+    height: 15%;    
     position: fixed;
-/* 設定後整個區塊會往右偏移 */
     top: 0;
     left: 0;
-/* 設定完後會滿版，但整個區塊會往上偏移，需調整margin:top+bottom */
+/*  外面包住的div(這次是container)如果有設定padding，內容寬度會因此縮小，直接影響到其中的div
+（例如設定width=100%時，實際寬度不會超過padding）；如果div設定了margin負值則會整個偏掉 */
+}
+
+
+#logo,img
+{
+    width: auto;
+    height: 100%;
+    background-size:cover;
+    /* text-align:left; */
+}
+
+
+img
+{
+    position: relative;
+    right: -10%;
+
 }
 
 
@@ -42,9 +59,7 @@ body
     background-color: green;
     
     width: 100%;
-/* 設定後整個區塊右側會缺一塊，只能以auto屬性置中*/
     position: fixed;
-/* 設定後整個區塊會往右偏移 */
     bottom: 0;
     left: 0;
 
@@ -52,13 +67,7 @@ body
 } 
 
 
-img
-{
-    border: 0;
-    max-width: 20%;
-    height: auto;
-    text-align:left;
-}
+
 
 
 .head-nav,.middle,.middle-right
