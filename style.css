@@ -10,58 +10,56 @@ body
 }
 
 .container
-{
-  
-    width: 960px;
-    /* border: slateblue dotted 1px; */
+{  
+    max-width: 980px;
+/* 加上max之後不會超出 */
     margin:0px auto;
-    padding: 15px 10px;
+    padding: 10px;
 
     /* 會繼承的設定 */
-    background-color: black;
+    background-color: #424874;
     color:white;
-   
 }
 
 .header
 {
-    background-color: green;
-
     width: 100%;
-    height: 15%;    
-    position: fixed;
+    height: 15vh;
+    /* position: fixed;
     top: 0;
-    left: 0;
+    left: 0; */
 /*  外面包住的div(這次是container)如果有設定padding，內容寬度會因此縮小，直接影響到其中的div
 （例如設定width=100%時，實際寬度不會超過padding）；如果div設定了margin負值則會整個偏掉 */
 }
 
-
-#logo,img
+.back
 {
-    width: auto;
     height: 100%;
-    background-size:cover;
-    /* text-align:left; */
+    background-color: white;
+}
+
+.logo
+{
+    /* width: 50%; */
+    text-align:center;
+    height: 100%;
 }
 
 
 img
 {
-    position: relative;
-    right: -10%;
-
+    max-height: 100%;
 }
 
 
 .footer
 {
-    background-color: green;
+    background-color: #424874;
     
     width: 100%;
-    position: fixed;
+    /* position: fixed;
     bottom: 0;
-    left: 0;
+    left: 0; */
 
     /* justify-content: space-between;  */
 } 
@@ -70,25 +68,27 @@ img
 
 
 
-.head-nav,.middle,.middle-right
+.head-nav
+/* ,.middle,.middle-right */
 {
 
     /* 有設定就會變成展開框(理由未知)，沒有就是3個按鈕 */
-    /* width: 580px; */
-
+    /* width: 30%580px; */
+    background-color: #BD93BD;
     border: slateblue dotted 1px;
-    margin: 50px auto;
-    padding: 15px 30px;
+    margin: 0px auto;
+    padding: 15px;
 
 }
 
-/* .ad,.nav
+/* .ad, */
+.nav
 {
 display: flex;
 justify-content: center;
 }
 
-*/
+
 
 
 
