@@ -52,40 +52,49 @@ img
 }
 
 
-.footer
+/* .footer
 {
-    background-color: #424874;
-    
+    background-color: #424874; 
     width: 100%;
     /* position: fixed;
     bottom: 0;
     left: 0; */
 
-    /* justify-content: space-between;  */
-} 
+    /* justify-content: space-between;  
+}  */
 
-
-
-
-
-.head-nav
-/* ,.middle,.middle-right */
-{
-
-    /* 有設定就會變成展開框(理由未知)，沒有就是3個按鈕 */
-    /* width: 30%580px; */
-    background-color: #BD93BD;
-    border: slateblue dotted 1px;
-    margin: 0px auto;
-    padding: 15px;
-
-}
 
 /* .ad, */
 .nav
 {
-display: flex;
-justify-content: center;
+    display: flex;
+    /* justify-content: center; */
+}
+
+/* ,.middle,.middle-right */
+.head-nav
+{
+    /* 有設定就會變成展開框(理由未知)，沒有就是3個按鈕 */
+    width: 33.33%;
+    text-align:center;
+    background-color: #BD93BD;
+ 
+    /* margin: 0px auto; */
+    /* padding: 15px; */
+}
+
+.slideshow
+{
+    height: 50vh;
+    margin-top: 2px;
+    /* 暫時 */
+    border: #F2E9DC double 3px;
+}
+    
+.runhorselight
+{
+    display: none;
+    /* 暫時不顯示圖片 */
 }
 
 
