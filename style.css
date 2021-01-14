@@ -46,7 +46,7 @@ body
 }
 
 
-img
+.logo-img
 {
     max-height: 100%;
 }
@@ -83,18 +83,19 @@ img
     /* padding: 15px; */
 }
 
-.slideshow
+.slide
 {
+    max-width: 980px;
     height: 50vh;
     margin-top: 2px;
     /* 暫時 */
     border: #F2E9DC double 3px;
 }
     
-.runhorselight
+.sam
 {
-    display: none;
-    /* 暫時不顯示圖片 */
+    max-width: 100%;
+    
 }
 
                                                                                                    
