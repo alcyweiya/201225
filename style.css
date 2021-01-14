@@ -6,7 +6,7 @@ body
     border:black solid 2px;
     background-color: white;
     /* text-align:center; */
-    padding: 5px;
+    padding: 2px;
 }
 
 .container
@@ -14,7 +14,7 @@ body
     max-width: 980px;
 /* 加上max之後不會超出 */
     margin:0px auto;
-    padding: 10px;
+    padding: 1px;
 
     /* 會繼承的設定 */
     background-color: #424874;
@@ -36,12 +36,13 @@ body
 {
     height: 100%;
     background-color: white;
+    text-align:center;
 }
 
 .logo
 {
     /* width: 50%; */
-    text-align:center;
+    /* text-align:center; */
     height: 100%;
 }
 
@@ -76,6 +77,7 @@ body
 {
     /* 有設定就會變成展開框(理由未知)，沒有就是3個按鈕 */
     width: 33.33%;
+    margin: 5px;
     text-align:center;
     background-color: #BD93BD;
  
@@ -83,22 +85,110 @@ body
     /* padding: 15px; */
 }
 
-.slide
+.slider
 {
     max-width: 980px;
-    height: 50vh;
+    height: 480px;
+    overflow: hidden;
     margin-top: 2px;
     /* 暫時 */
     border: #F2E9DC double 3px;
-}
-    
-.sam
-{
-    max-width: 100%;
+    position: relative;
     
 }
 
-                                                                                                   
+
+
+.slider div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+    
+
+.slider div 
+{
+
+    -webkit-animation: round 15s linear infinite;
+            animation: round 15s linear infinite;
+}
+
+@-webkit-keyframes round 
+{
+    6.66% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 0 - 1秒 淡入*/
+    }
+    26.66% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 1- 5秒靜止*/
+    }
+    33.33% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        /* 5-6秒淡出*/
+    }
+}
+@keyframes round {
+    6.66% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 0 - 1秒 淡入*/
+    }
+    26.66% {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        /* 1- 5秒靜止*/
+    }
+    33.33% {
+        opacity: 0;
+        filter: alpha(opacity=0);
+        /* 5-6秒淡出*/
+    }
+}
+
+.slider div:nth-child(1) 
+{
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+}
+
+.slider div:nth-child(2) 
+{
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+}
+
+.slider div:nth-child(3) 
+{
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
+}
+
+.slider:hover div 
+{
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+}
+
+
+.sam
+{
+    max-width: 100%;
+    height: auto;
+}
+
+#left,#right
+{
+    max-width: 256px;
+    max-height: 256px;
+}
+
 
 
 
