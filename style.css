@@ -11,10 +11,11 @@ body
 
 .container
 {  
+    width: 100%;
     max-width: 980px;
-/* 加上max之後不會超出 */
+    /* 加上max之後不會超出 */
     margin:0px auto;
-    padding: 1px;
+    /* padding: 1px; */
 
     /* 會繼承的設定 */
     background-color: #424874;
@@ -53,19 +54,7 @@ body
 }
 
 
-/* .footer
-{
-    background-color: #424874; 
-    width: 100%;
-    /* position: fixed;
-    bottom: 0;
-    left: 0; */
 
-    /* justify-content: space-between;  
-}  */
-
-
-/* .ad, */
 .nav
 {
     display: flex;
@@ -73,7 +62,7 @@ body
 }
 
 /* ,.middle,.middle-right */
-.head-nav
+.item
 {
     /* 有設定就會變成展開框(理由未知)，沒有就是3個按鈕 */
     width: 33.33%;
@@ -84,6 +73,45 @@ body
     /* margin: 0px auto; */
     /* padding: 15px; */
 }
+
+@media screen and (min-width: 768px)
+{
+.banner
+{
+    display: flex;
+}
+
+.header
+{
+    width: 65%;
+}
+
+.back
+{
+    background-color: #424874;
+
+}
+
+.nav
+{
+    width: 35%;
+    align-items: center;
+}
+
+.item
+{
+    border-radius: 99em;
+    /* text-align:center; */
+} 
+
+
+
+
+
+
+}
+
+
 
 .slider
 {
@@ -192,6 +220,24 @@ body
 
 
 
+
+
+
+
+
+/* .footer
+{
+    background-color: #424874; 
+    width: 100%;
+    /* position: fixed;
+    bottom: 0;
+    left: 0; */
+
+    /* justify-content: space-between;  
+}  */
+
+
+/* .ad, */
 
 
 
