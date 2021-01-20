@@ -72,6 +72,22 @@ body
     /* padding: 15px; */
 }
 
+
+.middle{
+    position: absolute;
+    width: 980px;
+    display: flex;
+    justify-content: center;
+}
+
+label{
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
 @media screen and (min-width: 768px)
 {
     .banner{
