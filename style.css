@@ -11,7 +11,7 @@ body
 
 .container
 {  
-    width: 100%;
+    /* width: 100%; */
     max-width: 980px;
     /* 加上max之後不會超出 */
     margin:0px auto;
@@ -73,16 +73,16 @@ body
 }
 
 
-.middle{
-    position: absolute;
-    width: 980px;
+.news{
+    width: 100%;
+    /* position: absolute;
     display: flex;
-    justify-content: center;
+    justify-content: center; */
 }
 
 label{
-    border: 2px solid #40D3DC;
-    padding: 5px;
+    /* border: 2px solid #40D3DC;
+    padding: 5px; */
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
@@ -90,7 +90,7 @@ label{
 
 @media screen and (min-width: 768px)
 {
-    .banner{
+    .banner,.middle{
         display: flex;
         /* justify-content: space-between; */
         align-items: center;
@@ -117,100 +117,158 @@ label{
         margin-left: 25%;
     } 
 
+    .middle{
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: center;
+        /* flex-wrap: nowrap; */
+    }
+
+    .news,.ad
+    {
+        width: 50%;
+    }
 }
 
 
 
 .slider
 {
-    width: 100%;
-    height: 75vh;
+    max-width: 980px;
+    height: 70vh;
     overflow: hidden;
-    margin-top: 2px;
+    /* margin-top: 2px; */
     /* 暫時 */
     /* border: #F2E9DC double 3px; */
-    position: relative;    
+    /* position: relative;     */
 }
 
 
-
-.slider div
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    filter: alpha(opacity=0);
-}
+.slides{
+    /* 設定為跑馬燈的5倍寬度，並排排列 */
+    width: 400%;
+    height: 100%;
+    display: flex;
     
+  }
+  
+  .slides input{
+    /* 藏起來 */
+    display: none;
+  }
+  
+  .slide{
+    /* 為slides的20%=寬度100% */
+    width: 25%;
+    transition: 2s;
+    /* 自己加的置中 */
+    text-align: center;
+  }
+  
+  /* .slide img{
+    width: 530px;
+    height: 530px;
+  } */
+  
+  /*css for manual slide navigation*/
+  
+  .navigation-manual{
+    position: absolute;
+    left:0;
+    right:0;
+    /* margin-left: auto;
+    margin-right: auto; */
+    max-width: 100%;
+    /* margin-top: -20px; */
+    display: flex;
+    /* 使用flex讓label標籤可並排 此時label會變回原本的正方形=圓角處理後為圓形 而非長橢圓形 */
+    justify-content: center;
+  }
+  
+  .manual-btn{
+    opacity: 0.3;
+    max-width: 33.33%;
+    max-height: 50px;
+    overflow: hidden;
+    /* border: 2px solid #40D3DC; */
+    /* padding: 5px; */
+    border-radius: 10px;
+    /* 圓角 */
+    cursor: pointer;
+    /* 游標指向時樣式 */
+    transition: 1s;
+    /* 轉場漸變效果&秒數 */
+  }
+  
+  /* 選擇器：所有m...元素(除了最後一個) */
+  .manual-btn:not(:last-child){
+    margin-right: 70px;
+    /* 手動按鈕的右邊間距 */
+  }
+  
+  .manual-btn:hover{
+    opacity: 1;
+  }
+  
 
-.slider div 
-{
+  /* 使用~選擇器，當input(id=radio)被選取時，
+  移動其後的div(class=first)，移動方式為負數左邊間距(形同左移) */
+  #radio1:checked ~ .first{
+    margin-left:
+    0;
+  }
+  #radio2:checked ~ .first{
+    margin-left: -25%;
+  }
+  #radio3:checked ~ .first{
+    margin-left: -50%;
+  }
+  #left:checked ~ .first{
+    margin-right: 25%;
+  }
+  #right:checked ~ .first{
+    margin-left: 25%;
+  }
 
-    -webkit-animation: round 15s linear infinite;
-            animation: round 15s linear infinite;
-}
+  
+  /*css for automatic navigation*/
+  
+  .navigation-auto{
+    position: absolute;
+    left:0;
+    right:0;
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    margin-top: 460px;
+  }
+  
+  .navigation-auto div{
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+  
+/* 上段：第5個slide位置和外型設計(調整到跟label相同並疊上去)
+下段：~選擇器，radio被點選時，相對應的按鈕背景變色
+（就是做一套專門給自動輪播用的按鈕，照樣變色） */
 
-@-webkit-keyframes round 
-{
-    6.66% {
-        opacity: 1;
-        filter: alpha(opacity=100);
-        /* 0 - 1秒 淡入*/
-    }
-    26.66% {
-        opacity: 1;
-        filter: alpha(opacity=100);
-        /* 1- 5秒靜止*/
-    }
-    33.33% {
-        opacity: 0;
-        filter: alpha(opacity=0);
-        /* 5-6秒淡出*/
-    }
-}
-@keyframes round {
-    6.66% {
-        opacity: 1;
-        filter: alpha(opacity=100);
-        /* 0 - 1秒 淡入*/
-    }
-    26.66% {
-        opacity: 1;
-        filter: alpha(opacity=100);
-        /* 1- 5秒靜止*/
-    }
-    33.33% {
-        opacity: 0;
-        filter: alpha(opacity=0);
-        /* 5-6秒淡出*/
-    }
-}
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #40D3DC;
+  }
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #40D3DC;
+  }
+  #radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #40D3DC;
+  }
 
-.slider div:nth-child(1) 
-{
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s;
-}
-
-.slider div:nth-child(2) 
-{
-    -webkit-animation-delay: 5s;
-            animation-delay: 5s;
-}
-
-.slider div:nth-child(3) 
-{
-    -webkit-animation-delay: 10s;
-            animation-delay: 10s;
-}
-
-.slider:hover div 
-{
-    -webkit-animation-play-state: paused;
-            animation-play-state: paused;
-}
-
+  
 
 .sam
 {
@@ -218,10 +276,40 @@ label{
     height: auto;
 }
 
+.slider-arrow
+{
+    /* z-index: 0; */
+    max-width: 980px;
+    height: 15%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+#prev
+{
+    text-align: left;
+    position: absolute;
+    left: 18%;
+    bottom: 45%;
+    width: 100%;
+}
+
+
+#next
+{
+    text-align: right;
+    position: absolute;
+    right:18%;
+    bottom: 45%;
+    width: 100%;
+}
+
 #left,#right
 {
-    max-width: 256px;
-    max-height: 256px;
+    max-width: 50px;
+    max-height: 70px;
 }
 
 
