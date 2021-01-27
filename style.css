@@ -1,17 +1,23 @@
 
 
 
-body
-{
-    border:black solid 2px;
-    background-color: white;
-    /* text-align:center; */
-    padding: 2px;
+
+body, html{
+  /* border:black solid 2px; */
+  background-color: white;
+  /* text-align:center; */
+  padding: 2px;
+
+  width: 100%;
+  height: 100%;	
+  margin: 0;
+  /* font-family: 'Just Another Hand', cursive; */
+  overflow-X: hidden;/* optional */
 }
 
 .container
 {  
-    /* width: 100%; */
+    width: 100%;
     max-width: 980px;
     /* 加上max之後不會超出 */
     margin:0px auto;
@@ -21,6 +27,9 @@ body
     background-color: #424874;
     color:white;
 }
+
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
 
 .header
 {
@@ -54,8 +63,6 @@ body
     max-height: 100%;
 }
 
-
-
 .nav{
     display: flex;
 }
@@ -74,23 +81,48 @@ body
 
 
 .news{
-    width: 100%;
-    /* position: absolute;
-    display: flex;
-    justify-content: center; */
+	width: 100%;
+	text-align: center;
+	/* margin: 0 auto; */
 }
 
-label{
-    /* border: 2px solid #40D3DC;
-    padding: 5px; */
+.ad , .info , .link
+{
+	text-align: center;
+}
+
+.ad div
+{
+	display: inline-block;
+	margin: 10px;	
+}
+
+.ad img
+{
+	opacity: 0.5;
+	width: 75px;
+	height: 75px;
+}
+
+.footer div
+{
+	padding: 15px 0;
+}
+
+
+
+
+/* label{
+    border: 2px solid #40D3DC;
+    padding: 5px;
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
-}
+} */
 
 @media screen and (min-width: 768px)
 {
-    .banner,.middle{
+    .banner , .middle , .footer{
         display: flex;
         /* justify-content: space-between; */
         align-items: center;
@@ -106,15 +138,15 @@ label{
     }
 
     .nav{
-        display: block;
-        width: 15%;
+        /* display: block; */
+        width: 35%;
         /* text-align: center; */
     }
 
     .item{
-        width: 50%;
+        width: 100%;
         border-radius: 59em;
-        margin-left: 25%;
+        margin-left: 2%;
     } 
 
     .middle{
@@ -124,201 +156,233 @@ label{
         /* flex-wrap: nowrap; */
     }
 
-    .news,.ad
+    .news , .ad , .info , .link
     {
         width: 50%;
-    }
+	}
+	
+
+	.news
+	{
+		text-align: left;
+		margin-left: 25px;
+	}
+
+	.info
+	{
+		order: 1;
+		text-align: left;
+		margin-left: 25px;
+	}
+
+	.link
+	{
+		order: 2;
+		text-align: end;
+		margin-right: 25px;
+	}
+
+
+
+}
+
+
+#i1, #i2, #i3, #i4, #i5{ display: none;}
+
+.slider{
+		margin: 0 auto;
+		/* margin-top: 20px; */
+    	position: relative;
+    	max-width: 980px;
+    	overflow: hidden;
+		
+		width: 100%;
+		height: 0;
+		padding-bottom: 60%;
+	  	user-select: none;
+		/* background-color: #1c1c1c; */
+		/* border: solid 10px #616161; */
+		border-radius:10px ; 
+	}
+
+	.slider .slide_img{
+		position: absolute;
+		width: 100%;;
+		height: auto;
+	}
+
+	.slider .slide_img img{
+		width: inherit;
+		height: inherit;
+	}
+
+	.sam
+	{
+		width: 100%;
+		height: auto;
+	}
+
+	 .prev, .next{
+		width: 8%;
+		height: 100%;
+		position: absolute;
+		top:0; 
+		background-color: rgba(88, 88, 88,.2);
+		color:rgba(244, 244, 244,.9);
+		z-index: 99;
+		transition: .45s;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	.next{right: 0;}
+	.prev{left: 0;}
+
+	.prev span{left: 15%;}
+	.next span{right: 15%;}
+
+
+	label span{
+		position: absolute;
+		font-size: 100pt;
+		top: 50%;
+	 	transform: translateY(-50%);
+	}
+
+	.prev:hover, .next:hover{
+		transition: .3s;
+		background-color: rgba(88, 88, 89,.8);
+		color: #ffffff; 
+	}
+
+.slider #nav_slide{
+	width: 100%;
+	bottom: 6%;
+	height: 11px;
+	position: absolute;
+	text-align: center;
+	z-index: 99;
+	cursor: default;
+}
+
+#nav_slide .dots{
+	top: -5px;
+	width: 18px;
+	height: 18px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.6);
+	transition: .4s;
+}
+
+#nav_slide .dots:hover {
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.9);
+	transition: .25s
+}
+
+.slide_img{z-index: -1;}
+
+	#i1:checked ~ #one  ,
+	#i2:checked ~ #two  ,
+	#i3:checked ~ #three,
+	#i4:checked ~ #four ,
+	#i5:checked ~ #five 
+	{z-index: 9; animation: scroll 2s ease-in-out;}
+
+	#i1:checked  ~  #nav_slide #dot1,
+	#i2:checked  ~  #nav_slide #dot2,
+	#i3:checked  ~  #nav_slide #dot3,
+	#i4:checked  ~  #nav_slide #dot4,
+	#i5:checked  ~  #nav_slide #dot5
+	{ background-color: rgba(255,255,255,.9);}
+
+@keyframes scroll{
+	0%{	opacity:.4;}
+	100%{opacity:1;}
+}		
+
+/* 
+@import url('https://fonts.googleapis.com/css?family=Just+Another+Hand'); */
+
+/* .yt{
+	margin: 0 auto;
+	margin-top: 50px;
+	position: relative;
+	width: 150px;
+	height:50px;
+	border: outset #2c2c2c 4px;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 30pt;
+	transition: .5s;
+}
+
+.yt a{
+	text-decoration: none;
+	color: #4c4c4c;
+	transition: .5s;
+}
+
+.yt:hover{
+	background: #4c4c4c;
+	transition: .3s;
+}
+
+.yt:hover a{
+	color: #fff;
+	transition: .3s;
+}
+ */
+
+/* @media screen  and(min-width: 970px){
+	.me{ display: none;}
+} */
+
+
+@media screen and (max-width: 768px)
+{
+	.slider{
+		/* border: none; */
+		/* width: 100%;
+		height: 0; */
+		padding-bottom: 70%; 
+	}	
+	
+	label span{ font-size: 50pt; }
+	
+	.prev span{left: 25%;}
+	.next span{right: 25%;}
+
+	.prev, .next{
+		width: 8%;
+	}	
+
+	.slider #nav_slide{
+		bottom: 15%;
+	}
+
+	#nav_slide .dots{
+		width: 12px;
+		height: 12px;
+		margin: 0 10px;
+	}
 }
 
 
 
-.slider
+/* .slider-arrow
 {
-    max-width: 980px;
-    height: 70vh;
-    overflow: hidden;
-    /* margin-top: 2px; */
-    /* 暫時 */
-    /* border: #F2E9DC double 3px; */
-    /* position: relative;     */
-}
-
-
-.slides{
-    /* 設定為跑馬燈的5倍寬度，並排排列 */
-    width: 400%;
-    height: 100%;
-    display: flex;
-    
-  }
-  
-  .slides input{
-    /* 藏起來 */
-    display: none;
-  }
-  
-  .slide{
-    /* 為slides的20%=寬度100% */
-    width: 25%;
-    transition: 2s;
-    /* 自己加的置中 */
-    text-align: center;
-  }
-  
-  /* .slide img{
-    width: 530px;
-    height: 530px;
-  } */
-  
-  /*css for manual slide navigation*/
-  
-  .navigation-manual{
-    position: absolute;
-    left:0;
-    right:0;
-    /* margin-left: auto;
-    margin-right: auto; */
-    max-width: 100%;
-    /* margin-top: -20px; */
-    display: flex;
-    /* 使用flex讓label標籤可並排 此時label會變回原本的正方形=圓角處理後為圓形 而非長橢圓形 */
-    justify-content: center;
-  }
-  
-  .manual-btn{
-    opacity: 0.3;
-    max-width: 33.33%;
-    max-height: 50px;
-    overflow: hidden;
-    /* border: 2px solid #40D3DC; */
-    /* padding: 5px; */
-    border-radius: 10px;
-    /* 圓角 */
-    cursor: pointer;
-    /* 游標指向時樣式 */
-    transition: 1s;
-    /* 轉場漸變效果&秒數 */
-  }
-  
-  /* 選擇器：所有m...元素(除了最後一個) */
-  .manual-btn:not(:last-child){
-    margin-right: 70px;
-    /* 手動按鈕的右邊間距 */
-  }
-  
-  .manual-btn:hover{
-    opacity: 1;
-  }
-  
-
-  /* 使用~選擇器，當input(id=radio)被選取時，
-  移動其後的div(class=first)，移動方式為負數左邊間距(形同左移) */
-  #radio1:checked ~ .first{
-    margin-left:
-    0;
-  }
-  #radio2:checked ~ .first{
-    margin-left: -25%;
-  }
-  #radio3:checked ~ .first{
-    margin-left: -50%;
-  }
-  #left:checked ~ .first{
-    margin-right: 25%;
-  }
-  #right:checked ~ .first{
-    margin-left: 25%;
-  }
-
-  
-  /*css for automatic navigation*/
-  
-  .navigation-auto{
-    position: absolute;
-    left:0;
-    right:0;
-    display: flex;
-    max-width: 100%;
-    justify-content: center;
-    margin-top: 460px;
-  }
-  
-  .navigation-auto div{
-    border: 2px solid #40D3DC;
-    padding: 5px;
-    border-radius: 10px;
-    transition: 1s;
-  }
-  
-  .navigation-auto div:not(:last-child){
-    margin-right: 40px;
-  }
-  
-/* 上段：第5個slide位置和外型設計(調整到跟label相同並疊上去)
-下段：~選擇器，radio被點選時，相對應的按鈕背景變色
-（就是做一套專門給自動輪播用的按鈕，照樣變色） */
-
-  #radio1:checked ~ .navigation-auto .auto-btn1{
-    background: #40D3DC;
-  }
-  #radio2:checked ~ .navigation-auto .auto-btn2{
-    background: #40D3DC;
-  }
-  #radio3:checked ~ .navigation-auto .auto-btn3{
-    background: #40D3DC;
-  }
-
-  
-
-.sam
-{
-    width: 100%;
-    height: auto;
-}
-
-.slider-arrow
-{
-    /* z-index: 0; */
+    z-index: 0; 
     max-width: 980px;
     height: 15%;
     position: absolute;
     left: 0;
     right: 0;
     text-align: center;
-}
-
-#prev
-{
-    text-align: left;
-    position: absolute;
-    left: 18%;
-    bottom: 45%;
-    width: 100%;
-}
-
-
-#next
-{
-    text-align: right;
-    position: absolute;
-    right:18%;
-    bottom: 45%;
-    width: 100%;
-}
-
-#left,#right
-{
-    max-width: 50px;
-    max-height: 70px;
-}
-
-
-
-
-
-
-
-
+} */
 
 /* .footer
 {

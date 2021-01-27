@@ -33,99 +33,77 @@
 
 
       <div class="nav">
-          <div class="item" id="game">產品</div>
-          <div class="item" id="job">徵才</div>
-          <div class="item" id="info">資訊</div>
+          <div class="item" id="game"><a href="">遊戲</a></div>
+          <div class="item" id="job"><a href="">募資頁面</a></div>
+          <div class="item" id="info"><a href="">資訊</a></div>
       </div>
   </div>
 
-  <!--image slider start-->
+ 
   <div class="slider">
-    <div class="slides">
-        <!--radio buttons start-->
-        <input type="radio" name="radio-btn" id="radio1" value="1">
-        <input type="radio" name="radio-btn" id="radio2" value="2">
-        <input type="radio" name="radio-btn" id="radio3" value="3">
-        <input type="radio" name="radio-btn" id="left">
-        <input type="radio" name="radio-btn" id="right">
-        <!--radio buttons end-->
-        <!--slide images start-->
-        <div class="slide first">
-              <img id="fox" class="sam" src="./img/fox_1920.jpg" alt="狐狸1"> 
-            </div>
-        <div class="slide">
-              <img id="hedgehog" class="sam" src="./img/hedgehog_1920.jpg" alt="刺蝟2">
-            </div>
-        <div class="slide">
-              <img id="pets" class="sam" src="./img/pets_1920.jpg" alt="狗狗3">
-            </div>
+	
+    <input type="radio" id="i1" name="images" checked />
+    <input type="radio" id="i2" name="images" />
+    <input type="radio" id="i3" name="images" />
+    <!-- <input type="radio" id="i4" name="images" />
+    <input type="radio" id="i5" name="images" />	 -->
+    
+    <div class="slide_img" id="one">			
         
-        <!--slide images end-->
-        <!--automatic navigation start-->
-        <div class="navigation-auto">
-                  <div class="auto-btn1"></div>
-                  <div class="auto-btn2"></div>
-                  <div class="auto-btn3"></div>
-            </div>
-        <!--automatic navigation end-->
+        <img id="fox" class="sam" src="./img/fox_1920.jpg" alt="狐狸1">
+        
+          <label class="prev" for="i3"><span>&#x2039;</span></label>
+          <label class="next" for="i2"><span>&#x203a;</span></label>	
+      
     </div>
-    <!--manual navigation start-->
-    <div class="navigation-manual">
-        <label for="radio1" class="manual-btn"><img src="./icon/icon1.PNG" alt=""></label>
-        <label for="radio2" class="manual-btn"><img src="./icon/icon2.PNG" alt=""></label>
-        <label for="radio3" class="manual-btn"><img src="./icon/icon3.PNG" alt=""></label>
-
+    
+    <div class="slide_img" id="two">
+      
+        <img id="hedgehog" class="sam" src="./img/hedgehog_1920.jpg" alt="刺蝟2">
+        
+          <label class="prev" for="i1"><span>&#x2039;</span></label>
+          <label class="next" for="i3"><span>&#x203a;</span></label>
+      
     </div>
-    <!--manual navigation end-->
-    <div id="prev">
-      <label for="left" class="manual-btn">
-        <img id="left" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDc3LjE3NSA0NzcuMTc1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NzcuMTc1IDQ3Ny4xNzU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGQ9Ik0xNDUuMTg4LDIzOC41NzVsMjE1LjUtMjE1LjVjNS4zLTUuMyw1LjMtMTMuOCwwLTE5LjFzLTEzLjgtNS4zLTE5LjEsMGwtMjI1LjEsMjI1LjFjLTUuMyw1LjMtNS4zLDEzLjgsMCwxOS4xbDIyNS4xLDIyNQ0KCQljMi42LDIuNiw2LjEsNCw5LjUsNHM2LjktMS4zLDkuNS00YzUuMy01LjMsNS4zLTEzLjgsMC0xOS4xTDE0NS4xODgsMjM4LjU3NXoiLz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K"/></label>
+        
+    <div class="slide_img" id="three">
+        <img id="pets" class="sam" src="./img/pets_1920.jpg" alt="狗狗3"> 
+        
+          <label class="prev" for="i2"><span>&#x2039;</span></label>
+          <label class="next" for="i1"><span>&#x203a;</span></label>
     </div>
-
-    <div id="next">
-    <label for="right" class="manual-btn">
-        <img id="right" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDc3LjE3NSA0NzcuMTc1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NzcuMTc1IDQ3Ny4xNzU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGQ9Ik0zNjAuNzMxLDIyOS4wNzVsLTIyNS4xLTIyNS4xYy01LjMtNS4zLTEzLjgtNS4zLTE5LjEsMHMtNS4zLDEzLjgsMCwxOS4xbDIxNS41LDIxNS41bC0yMTUuNSwyMTUuNQ0KCQljLTUuMyw1LjMtNS4zLDEzLjgsMCwxOS4xYzIuNiwyLjYsNi4xLDQsOS41LDRjMy40LDAsNi45LTEuMyw5LjUtNGwyMjUuMS0yMjUuMUMzNjUuOTMxLDI0Mi44NzUsMzY1LjkzMSwyMzQuMjc1LDM2MC43MzEsMjI5LjA3NXoNCgkJIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg=="/></label>    
-    </div>
-
   
+    <!-- <div class="slide_img" id="four">
+        <img src="http://wallpaperswide.com/download/big_hero_6_baymax-wallpaper-1152x720.jpg">	
+        
+          <label class="prev" for="i3"><span>&#x2039;</span></label>
+          <label class="next" for="i5"><span>&#x203a;</span></label>
+    </div> -->
   
+    <!-- <div class="slide_img" id="five">
+        <img src="http://www.wallpapereast.com/static/images/toys-wallpaper-hd-16339-17046-hd-wallpapers.jpg">	
+        
+          <label class="prev" for="i4"><span>&#x2039;</span></label>
+          <label class="next" for="i1"><span>&#x203a;</span></label>
+  
+    </div> -->
+  
+    <div id="nav_slide">
+      <label for="i1" class="dots" id="dot1"></label>
+      <label for="i2" class="dots" id="dot2"></label>
+      <label for="i3" class="dots" id="dot3"></label>
+      <!-- <label for="i4" class="dots" id="dot4"></label>
+      <label for="i5" class="dots" id="dot5"></label> -->
+    </div>
+      
   </div>
-  <!--image slider end-->
-
-  <!-- <div class="slider-arrow">   
-    <div id="prev">
-      <img id="left" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDc3LjE3NSA0NzcuMTc1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NzcuMTc1IDQ3Ny4xNzU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGQ9Ik0xNDUuMTg4LDIzOC41NzVsMjE1LjUtMjE1LjVjNS4zLTUuMyw1LjMtMTMuOCwwLTE5LjFzLTEzLjgtNS4zLTE5LjEsMGwtMjI1LjEsMjI1LjFjLTUuMyw1LjMtNS4zLDEzLjgsMCwxOS4xbDIyNS4xLDIyNQ0KCQljMi42LDIuNiw2LjEsNCw5LjUsNHM2LjktMS4zLDkuNS00YzUuMy01LjMsNS4zLTEzLjgsMC0xOS4xTDE0NS4xODgsMjM4LjU3NXoiLz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K" />
-    </div>
-    <div id="next">
-      <img id="right" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDc3LjE3NSA0NzcuMTc1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NzcuMTc1IDQ3Ny4xNzU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGQ9Ik0zNjAuNzMxLDIyOS4wNzVsLTIyNS4xLTIyNS4xYy01LjMtNS4zLTEzLjgtNS4zLTE5LjEsMHMtNS4zLDEzLjgsMCwxOS4xbDIxNS41LDIxNS41bC0yMTUuNSwyMTUuNQ0KCQljLTUuMyw1LjMtNS4zLDEzLjgsMCwxOS4xYzIuNiwyLjYsNi4xLDQsOS41LDRjMy40LDAsNi45LTEuMyw5LjUtNGwyMjUuMS0yMjUuMUMzNjUuOTMxLDI0Mi44NzUsMzY1LjkzMSwyMzQuMjc1LDM2MC43MzEsMjI5LjA3NXoNCgkJIi8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" />
-    </div>
-  </div> -->
 
 
-
-  <script type="text/javascript">
-    var counter = 1;
-  setInterval(function(){
-        for(var i = 1; i < 4; i++)
-        {
-            if(document.getElementById('radio' + i).checked)
-            {
-               counter = i+1;
-               if(counter > 3){
-               counter = 1;}
-
-            }
-        }
-        document.getElementById('radio' + counter).checked = true;
-        
-      }, 8000);
-  </script>
-  
 
   <div class="middle">
 
       <div class="news" id="news">
-        <H5>最新消息</H5>
+        <H3>最新消息</H3>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error dicta, incidunt ipsum a esse omnis suscipit recusandae eum consequuntur odit?</p>
         <!-- <input type="radio" id="ex1">
         <input type="radio" id="ex2">
@@ -134,9 +112,9 @@
       </div>
 
       <div class="ad">
-        <div class="middle-right" id="game-1">魅魔新妻</div>
-        <div class="middle-right" id="game-2">赫雷斯的角鬥場</div>
-        <div class="middle-right" id="game-3">莉莉準備中</div>
+        <div class="middle-right" id="game-1"><a href=""><img src="./icon/icon1.PNG" alt="魅魔新妻"></a></div>
+        <div class="middle-right" id="game-2"><a href=""><img src="./icon/icon2.PNG" alt="赫雷斯的角鬥場"></a></div>
+        <div class="middle-right" id="game-3"><a href=""><img src="./icon/icon3.PNG" alt="莉莉準備中"></a></div>
       </div>
          
   </div>
@@ -145,17 +123,7 @@
 
   <div class="footer">
 
-    <div class="company-info"> 
-    
-      永恆艾莉絲工坊有限公司<br>
-      (07) 398-2848    
-    </div>
-    
-    <div>
-      Icons made by <a href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-    </div>
-
-    <div class="company-link">
+    <div class="link">
 
       <a href="">FB</a>
       <a href="https://www.patreon.com/EternalAlice">ph</a>
@@ -165,11 +133,21 @@
 
     </div>
 
+    <div class="info"> 
+      永恆艾莉絲工坊有限公司
+      <br>
+      Copyright © 2021 EternalAlice. All rights reserved.
+    </div>
+
   </div>
 
 </div>
 
 
+
+<!-- <div>
+      Icons made by <a href="https://www.flaticon.com/authors/gregor-cresnar" title="Gregor Cresnar">Gregor Cresnar</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+    </div> -->
 
 
 <!-- 
@@ -224,6 +202,24 @@
           </div> -->
 
 
+<script type="text/javascript">
+      var counter = 1;
+    setInterval(function(){
+          for(var i = 1; i < 4; i++)
+          {
+              if(document.getElementById('i' + i).checked)
+              {
+                // (document.getElementById('dot' + i).unchecked)
+                 counter = i+1;
+                 if(counter > 3){
+                 counter = 1;}
+  
+              }
+          }
+          document.getElementById('i' + counter).checked = true;
+          
+        }, 8000);
+    </script> 
 
 
 
