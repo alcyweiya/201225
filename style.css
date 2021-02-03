@@ -71,7 +71,8 @@ a:hover{text-decoration:underline;}
 .item{
     /* 有設定就會變成展開框(理由未知)，沒有就是3個按鈕 */
     width: 33.33%;
-    margin: 5px;
+	margin: 5px;
+	padding: 2px;
     text-align:center;
     background-color: #BD93BD;
  
@@ -104,12 +105,23 @@ a:hover{text-decoration:underline;}
 	height: 75px;
 }
 
+.ad img:hover
+{
+	transition: .7s;
+	opacity: 1;
+}
+
 .footer div
 {
 	padding: 15px 0;
 }
 
-
+.link img
+{
+	margin: 5px;
+	width: 40px;
+	height: 40px;
+}
 
 
 /* label{
@@ -129,7 +141,7 @@ a:hover{text-decoration:underline;}
     }
 
     .header{
-        width: 85%;
+        width: 65%;
     }
 
     .back{
@@ -145,7 +157,7 @@ a:hover{text-decoration:underline;}
 
     .item{
         width: 100%;
-        border-radius: 59em;
+        border-radius: 50em;
         margin-left: 2%;
     } 
 
@@ -179,10 +191,15 @@ a:hover{text-decoration:underline;}
 	{
 		order: 2;
 		text-align: end;
-		margin-right: 25px;
+		margin-right: 20px;
 	}
 
-
+	.link img
+	{
+		width: 25px;
+		height: 25px;
+	}
+	
 
 }
 
@@ -210,6 +227,12 @@ a:hover{text-decoration:underline;}
 		width: 100%;;
 		height: auto;
 	}
+
+	.slider .slide_img a{
+		width: inherit;
+		height: inherit;
+	}
+
 
 	.slider .slide_img img{
 		width: inherit;
@@ -267,8 +290,8 @@ a:hover{text-decoration:underline;}
 
 #nav_slide .dots{
 	top: -5px;
-	width: 18px;
-	height: 18px;
+	width: 16px;
+	height: 16px;
 	margin: 0 4px;
 	position: relative;
 	border-radius: 100%;
